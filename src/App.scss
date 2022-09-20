@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: #8d8e92;
+}
+
+.slidecontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 80%;
+    /* Full-width */
+    height: 24px;
+    /* Specified height */
+    background: #212529;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    cursor: pointer;
+    border: 2px solid #8d8e92;
+    align-self: center;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 20px;
+    /* Slider handle height */
+    background: #c8cacf;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 20px;
+    /* Set a specific slider handle width */
+    height: 20px;
+    /* Slider handle height */
+    background: #c8cacf;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.drum-machine {
+    border: 3px solid black;
+    width: 660px;
+    height: 300px;
+    align-self: center;
+    background: #c8cacf;
+    display: flex;
+
+
+    .keys-div {
+        width: 370px;
+
+        div {
+            background: #c8cacf;
+        }
+
+
+        .drum-pad {
+            border-radius: 5px;
+            width: 31.5%;
+            height: 76px;
+            box-shadow: 4px 4px 10px 0px rgba(24, 23, 23, 0.959) !important;
+            cursor: pointer;
+            outline: none;
+            font-size: 20px;
+        }
+
+        button:nth-child(1),
+        button:nth-child(2),
+        button:nth-child(4),
+        button:nth-child(5) {
+            margin: 0 0.5rem 0.5rem 0 !important;
+        }
+
+        button:nth-child(3),
+        button:nth-child(6) {
+            margin: 0 0 0.5rem 0 !important;
+        }
+
+        button:nth-child(7),
+        button:nth-child(8) {
+            margin: 0 0.5rem 0 0 !important;
+        }
+    }
+
+    .menu-div {
+        width: 290px;
+
+        $switch-btn-height: 25px;
+        $switch-btn-width: 48px;
+
+        h5 {
+            margin-bottom: 0px !important;
+            font-weight: 700;
+        }
+
+        .switch {
+            width: $switch-btn-width;
+            height: $switch-btn-height;
+            background: #212529;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4px;
+
+            .switch-btn {
+                width: $switch-btn-width/2 - 4px;
+                height: $switch-btn-height - 8px;
+                background: #c8cacf;
+                cursor: pointer;
+
+            }
+        }
+
+        .display {
+            width: 150px;
+            height: 50px;
+            background: #212529;
+            margin-left: auto;
+            margin-right: auto;
+            color: #c8cacf;
+            display: flex;
+            justify-content: center;
+
+            p {
+                align-self: center;
+                margin-bottom: 0px !important;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+footer {
+    text-align: center;
+    width: fit-content;
+    height: 300px;
+    align-self: center;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    font-weight: 600;
+}
+
+footer a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    text-shadow:
+        -0 -2px 0 #000000,
+        0 -2px 0 #000000,
+        -0 2px 0 #000000,
+        0 2px 0 #000000,
+        -2px -0 0 #000000,
+        2px -0 0 #000000,
+        -2px 0 0 #000000,
+        2px 0 0 #000000,
+        -1px -2px 0 #000000,
+        1px -2px 0 #000000,
+        -1px 2px 0 #000000,
+        1px 2px 0 #000000,
+        -2px -1px 0 #000000,
+        2px -1px 0 #000000,
+        -2px 1px 0 #000000,
+        2px 1px 0 #000000,
+        -2px -2px 0 #000000,
+        2px -2px 0 #000000,
+        -2px 2px 0 #000000,
+        2px 2px 0 #000000,
+        -2px -2px 0 #000000,
+        2px -2px 0 #000000,
+        -2px 2px 0 #000000,
+        2px 2px 0 #000000;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+    outline: 0;
+}
+
+@media(max-width:690px) {
+
+    body {
+        background: #8d8e92;
+    }
+
+    .App {
+        height: fit-content;
+        flex-direction: column;
+    }
+
+
+    .drum-machine {
+        display: block;
+        width: 376px;
+        height: 600px;
+        margin-top: 20px;
+
+        .menu-div {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    footer {
+        height: fit-content;
+        align-self: center;
+        writing-mode: unset;
+        text-orientation: sideways;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:380px) {
+
+
+    .drum-machine {
+        width: 280px;
+        height: 520px;
+
+        .keys-div {
+            width: 274px;
+        }
+
+        .keys-div div {
+            padding: 2px !important;
+        }
+
+        .drum-pad {
+            width: 31.3% !important;
+            height: 76px;
+            cursor: pointer;
+        }
+
+        .menu-div {
+            padding: 10px !important;
+            width: 274px !important;
+        }
+    }
+
+}
